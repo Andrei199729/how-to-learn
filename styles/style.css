@@ -1,7 +1,8 @@
 h1,
 h2,
-p,
-  {
+h3,
+h4,
+p {
   padding: 0;
   margin : 0;
 }
@@ -21,17 +22,20 @@ p,
 /* Header */
 
 .header {
-  height    : 100vh;
-  min-height: 600px;
-  max-height: 756px;
+  height          : 100vh;
+  min-height      : 600px;
+  max-height      : 756px;
   /* выше установили ограничения для секции */
-  position  : relative;
+  background-color: #f2f2f2;
+  position        : relative;
+  display         : flex;
+  align-items     : center;
 }
 
-.header__column {
+/* .header__column {
   display       : flex;
   flex-direction: column;
-}
+} */
 
 .logo {
   width : 182px;
@@ -39,27 +43,22 @@ p,
 }
 
 .logo_place_header {
-  background-image : url('../images/logo_place_header.svg');
-  background-size  : contain;
-  background-repeat: no-repeat;
-  position         : absolute;
-  top              : 30px;
-  left             : 64px;
-  z-index          : 99;
+  position: absolute;
+  top     : 30px;
+  left    : 64px;
+  z-index : 99;
 }
 
 .header__title {
   width      : 730px;
-  align-items: center;
   margin-left: 64px;
-  margin-top : 300px;
   z-index    : 98;
   line-height: 96px;
-  font-size  : 120px;
+  font-size  : 102px;
   font-weight: bold;
 }
 
-.header_subtitle {
+.header__subtitle {
   width      : 388px;
   position   : absolute;
   bottom     : 30px;
@@ -70,19 +69,16 @@ p,
   font-weight: normal;
 }
 
-.header__images {
-  position: absolute;
-  bottom  : 0;
-  right   : 0;
-}
-
-.header__images_main-illustration {
-  width : 765px;
-  height: 608px;
-}
-
 .header__main-illustration {
-  z-index: 1;
+  background-image : url("../images/header-image.png");
+  background-size  : cover;
+  background-repeat: no-repeat;
+  width            : 765px;
+  height           : 608px;
+  position         : absolute;
+  bottom           : 0;
+  right            : 0;
+  z-index          : 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -90,13 +86,10 @@ p,
   height          : 568px;
   width           : 568px;
   background-color: #2f80ed;
-
-}
-
-.header__square {
-  position: absolute;
-  top     : 64px;
-  right   : 0;
+  position        : absolute;
+  bottom          : 64px;
+  right           : 0;
+  z-index         : 0;
 }
 
 /* Main */
@@ -121,6 +114,7 @@ p,
   line-height: 1.2;
   font-size  : 18px;
   font-weight: normal;
+  color      : #2f80ed;
 }
 
 .main-text {
@@ -133,6 +127,7 @@ p,
   line-height  : 34px;
   font-size    : 24px;
   font-weight  : normal;
+  margin-bottom: 30px;
 }
 
 .accent {
@@ -142,7 +137,7 @@ p,
 }
 
 .paragraph:last-child {
-  margin: 0;
+  margin-bottom: 0;
 }
 
 /* Digits */
@@ -366,17 +361,14 @@ p,
   color          : white;
 }
 
-.footer__icon-link {
+.footer__social-icon {
   width : 16px;
   height: 16px;
 }
 
 .logo_place_footer {
-  width            : 183px;
-  height           : 35px;
-  background-image : url('../images/logo_place_footer.svg');
-  background-size  : contain;
-  background-repeat: no-repeat;
+  width : 183px;
+  height: 35px;
 }
 
 .footer__columns_content_copyright {
